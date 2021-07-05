@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.container {
+  font-family: 'Lexend', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.container div {
+  margin: 1rem;
+}
+
+.container .state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+}
+
+.container .state .speed, .container .state .avg-speed {
+  color: #0003ca;
+}
+
+.container .quotationDiv, .container .author {
+  font-size: 1.5rem;
+}
+
+.container .quotationDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .input {
+  width: 95%;
+  padding: 0.4rem;
+  border: 2px solid grey;
+  outline: none;
+  font-size: 1.5rem;
+  font-family: 'Lexend', sans-serif;
+  color: white;
+  background: none;
+}
+
+.container .btn {
+  border: none;
+  background: green;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: "lexend",sans-serif;
+  font-size: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .btn:hover {
+  background: darkgreen;
+}
+/*# sourceMappingURL=style.css.map */

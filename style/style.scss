@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#1a1a1a;
+    color:white;
+}
+.container{
+    font-family:  'Lexend', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    div{
+        margin:1rem;
+    }
+    .state{
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        .speed,.avg-speed{
+            color:rgb(0, 3, 202)
+        }
+    }
+    .quotationDiv,.author{
+        font-size: 1.5rem;
+    }
+    .quotationDiv{
+        display: flex;
+        align-items: center;
+    }
+    .input{
+        width: 95%;
+        padding:0.4rem;
+        border:2px solid grey;
+        outline:none;
+        font-size: 1.5rem;
+        font-family:  'Lexend', sans-serif;
+        color:white;
+        background: none;
+    }
+    .btn{
+        border:none;
+        background: green;
+        color:white;
+        padding:0.5rem 1rem;
+        font-family: "lexend",sans-serif;
+        font-size: 2rem;
+        border-radius:4px;
+        cursor: pointer;
+        &:hover{
+            background: rgb(0, 100, 0);
+        }
+    }
+
+}
