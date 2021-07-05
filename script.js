@@ -9,7 +9,7 @@ const acuracy = document.querySelector('.acuracy')
 let start,wpm;
 
 async function getQuotation (){
-    let response = await fetch("http://api.quotable.io/random");
+    let response = await fetch("https://api.quotable.io/random");
     let quotation  = await response.json();
     
     authorField.innerHTML = `Author : ${quotation.author}.`
