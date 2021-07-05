@@ -7,7 +7,7 @@ const error = document.querySelector('.error');
 const speed = document.querySelector('.speed')
 const acuracy = document.querySelector('.acuracy')
 let start,wpm;
-
+let finish = 0;
 async function getQuotation (){
     let response = await fetch("https://api.quotable.io/random");
     let quotation  = await response.json();
@@ -18,6 +18,7 @@ async function getQuotation (){
     quoteField.innerHTML = quotation.content;
     
     input.onkeyup = (e)=>{
+        if(finish==1) return
         const answerArray = input.value.split('');
         quoteField.innerHTML = "";
         let count = 0;
@@ -45,12 +46,13 @@ async function getQuotation (){
         if(questionArray.length == answerArray.length){
             const errors = document.querySelectorAll('.red');
             let elapsedTime = new Date()-start;
-            wpm = 60*(totalWords.length/Math.trunc(elapsedTime/1000));
+            wpm = 60*(totalWords.length/(elapsedTime/1000));
             speed.innerHTML = `${wpm.toFixed(2)} Wpm`;
             error.innerHTML = `${errors.length} Errors`;
             let accuracy = (100/questionArray.length)*(questionArray.length-errors.length);
             console.log( accuracy.toFixed(2))
             acuracy.innerHTML = `${accuracy.toFixed(2)}% Accuracy`
+            finish=1;
             }
     }
 
@@ -63,6 +65,7 @@ btn.onclick = ()=>{
     input.value="";
     start = new Date();
     getQuotation();
+    finish = 0;
 }
 window.addEventListener('keyup',(e)=>{
     if(e.keyCode == 13) {
@@ -72,6 +75,7 @@ window.addEventListener('keyup',(e)=>{
         start = new Date();
         input.value="";
        getQuotation();
+       finish = 0;
     }
 })
   
