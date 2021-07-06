@@ -1,42 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
 
     <script src="script.js" defer></script>
     <title>Document</title>
-</head>
-<body>
-   <container class="container">
-       <div class="state">
-           <div class="speed">wpm</div>
-           <div class="error">0</div>
-           <div class="acuracy">--</div>
-       </div>
-       <div class="quotationDiv">
-           " &nbsp;
-           <div class="quotation"></div>
-           &nbsp;
-           "
-       </div>
-       <div class="author">
-       </div>
-       <div class="input-area">
-           <form action="">
-               <textarea name="input" class="input" id="" cols="10" rows="5"></textarea>
-           </form>
+  </head>
+  <body>
+    <container class="container">
+      <div class="state">
+        <div class="speed">wpm</div>
+        <div class="error">0</div>
+        <div class="acuracy">--</div>
+      </div>
+      <div class="quotationDiv">
+        " &nbsp;
+        <div class="quotation"></div>
+        &nbsp; "
+      </div>
+      <div class="author"></div>
+      <div>
+        <button class="btn">Enter to start</button>
+      </div>
+      <div class="input-area">
+        <form action="">
+          <textarea
+            name="input"
+            class="input"
+            id=""
+            cols="10"
+            rows="3"
+          ></textarea>
+        </form>
+      </div>
 
-       </div>
-       <div>
-           <button class="btn">Enter to start</button>
-       </div>
-   </container>
-    
-</body>
+      <div class="table-div">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Wpm</th>
+              <th>Errors</th>
+              <th>Accuracy</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+
+          </tbody>
+        </table>
+      </div>
+    </container>
+  </body>
 </html>

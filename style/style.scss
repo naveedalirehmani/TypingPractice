@@ -10,14 +10,15 @@ body{
     flex-direction: column;
     height: 100vh;
     div{
-        margin:1rem;
+        margin:0.5rem;
+        // border:1px solid red
     }
     .state{
         display: flex;
         align-items: center;
-        font-size: 3rem;
+        font-size: 1.5rem;
         .speed,.avg-speed{
-            color:rgb(0, 3, 202)
+            color:rgb(0, 4, 255)
         }
     }
     .quotationDiv,.author{
@@ -43,12 +44,29 @@ body{
         color:white;
         padding:0.5rem 1rem;
         font-family: "lexend",sans-serif;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border-radius:4px;
         cursor: pointer;
         &:hover{
             background: rgb(0, 100, 0);
         }
+    }
+    .table-div{
+        display: flex;
+        table {
+            border-collapse: collapse;
+            width:96%;
+            td, th {
+              font-family:"lexend",sans-serif;
+              text-align: left;
+              padding: 8px;
+            }
+            tr:nth-child(2n) {
+              background-color: #00fa1515;
+              color:white;
+            }
+          }
+
     }
 
 }

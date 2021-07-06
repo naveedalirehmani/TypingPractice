@@ -18,7 +18,7 @@ body {
 }
 
 .container div {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 .container .state {
@@ -28,11 +28,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .container .state .speed, .container .state .avg-speed {
-  color: #0003ca;
+  color: #0004ff;
 }
 
 .container .quotationDiv, .container .author {
@@ -65,12 +65,34 @@ body {
   color: white;
   padding: 0.5rem 1rem;
   font-family: "lexend",sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .container .btn:hover {
   background: darkgreen;
+}
+
+.container .table-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .table-div table {
+  border-collapse: collapse;
+  width: 96%;
+}
+
+.container .table-div table td, .container .table-div table th {
+  font-family: "lexend",sans-serif;
+  text-align: left;
+  padding: 8px;
+}
+
+.container .table-div table tr:nth-child(2n) {
+  background-color: #00fa1515;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

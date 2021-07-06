@@ -4,10 +4,12 @@ const authorField = document.querySelector('.author');
 const input = document.querySelector('.input');
 const btn = document.querySelector('.btn');
 const error = document.querySelector('.error');
-const speed = document.querySelector('.speed')
-const acuracy = document.querySelector('.acuracy')
+const speed = document.querySelector('.speed');
+const acuracy = document.querySelector('.acuracy');
+const tbody = document.querySelector('.tbody')
 let start,wpm;
 let finish = 0;
+
 async function getQuotation (){
     let response = await fetch("https://api.quotable.io/random");
     let quotation  = await response.json();
@@ -50,8 +52,18 @@ async function getQuotation (){
             speed.innerHTML = `${wpm.toFixed(2)} Wpm`;
             error.innerHTML = `${errors.length} Errors`;
             let accuracy = (100/questionArray.length)*(questionArray.length-errors.length);
-            console.log( accuracy.toFixed(2))
             acuracy.innerHTML = `${accuracy.toFixed(2)}% Accuracy`
+            const tr = document.createElement('tr')
+            const td1 = document.createElement('td')
+            const td2 = document.createElement('td')
+            const td3 = document.createElement('td')
+            td1.innerHTML = `${wpm.toFixed(2)} Wpm`
+            tr.appendChild(td1)
+            td2.innerHTML = `${errors.length} Errors`
+            tr.appendChild(td2)
+            td3.innerHTML = `${accuracy.toFixed(2)}% Accuracy`
+            tr.appendChild(td3)
+            tbody.appendChild(tr)
             finish=1;
             }
     }
